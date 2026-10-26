@@ -5,7 +5,7 @@ PROYECTO: Hazlo Tuyo (E-Commerce)
 MÓDULO: Módulo de Productos (CRUD Completo con Node.js y MySQL)
 
 ENLACE DEL REPOSITORIO EN GITHUB:
-https://github.com/gio-vach/Sena_evidencia_
+https://github.com/giovach0918/Sena_evidencia_
 
 INSTRUCCIONES DE ACCESO:
 El repositorio contiene el código fuente completo del backend en Node.js/Express, el modelo con consultas SQL, el controlador, las rutas, la interfaz gráfica de administración en /public y el script de base de datos database.sql.
