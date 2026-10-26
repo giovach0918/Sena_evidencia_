@@ -29,8 +29,12 @@ El presente módulo implementa la lógica de backend para la administración del
 ├── .env.example               # Plantilla de variables de entorno
 ├── .gitignore                 # Exclusión de node_modules y .env
 ├── repositorio.txt            # Enlace al repositorio de Git/GitHub (requerido por el SENA)
+├── public/                    # Panel administrativo web con interfaz Tailwind CSS
+│   ├── index.html             # Interfaz visual interactiva del CRUD
+│   └── assets/                # Imágenes de productos de Hazlo Tuyo
 └── src/
-    ├── app.js                 # Punto de entrada de la aplicación Express
+    ├── app.js                 # Configuración de Express, middlewares y rutas
+    ├── server.js              # Inicialización del servidor HTTP y conexión a MySQL
     ├── config/
     │   └── db.js              # Configuración del Pool de conexiones a MySQL
     ├── controllers/
