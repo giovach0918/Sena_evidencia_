@@ -1,9 +1,11 @@
+APRENDIZ: Giovanni Hernández
 EVIDENCIA: GA7-220501096-AA2-EV01. Codificación de módulos del software
 PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
-PROYECTO: Hazlo Tuyo
+PROYECTO: Hazlo Tuyo (E-Commerce)
+MÓDULO: Módulo de Productos (CRUD Completo con Node.js y MySQL)
 
 ENLACE DEL REPOSITORIO EN GITHUB:
-https://github.com/TU_USUARIO/Sena_evidencia_
+https://github.com/gio-vach/Sena_evidencia_
 
 INSTRUCCIONES DE ACCESO:
-El repositorio contiene el código fuente completo del módulo de Productos (Node.js, Express y MySQL) junto con el script de base de datos database.sql y las pruebas de los endpoints.
+El repositorio contiene el código fuente completo del backend en Node.js/Express, el modelo con consultas SQL, el controlador, las rutas, la interfaz gráfica de administración en /public y el script de base de datos database.sql.
