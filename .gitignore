@@ -1,0 +1,22 @@
+# Dependencias descargadas por npm (se reconstruyen con "npm install")
+node_modules/
+
+# Variables de entorno con datos sensibles (contraseñas)
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Archivos del sistema operativo / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Respaldos temporales
+*.sqlite
+*.sqlite3
+*.db
+
+# Permitir script de base de datos para la entrega SENA
+!database.sql

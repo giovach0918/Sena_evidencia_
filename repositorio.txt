@@ -1,0 +1,9 @@
+EVIDENCIA: GA7-220501096-AA2-EV01. Codificación de módulos del software
+PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
+PROYECTO: Hazlo Tuyo
+
+ENLACE DEL REPOSITORIO EN GITHUB:
+https://github.com/TU_USUARIO/Sena_evidencia_
+
+INSTRUCCIONES DE ACCESO:
+El repositorio contiene el código fuente completo del módulo de Productos (Node.js, Express y MySQL) junto con el script de base de datos database.sql y las pruebas de los endpoints.
