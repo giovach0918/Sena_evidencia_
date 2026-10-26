@@ -86,7 +86,8 @@ class ProductController {
             }
 
             // Generar ID y slug si no vienen en la petición
-            const finalId = id || `gl-${sku.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+            const cleanSku = sku.toLowerCase().replace(/[^a-z0-9]/g, '-');
+            const finalId = id || (cleanSku.startsWith('gl-') ? cleanSku : `gl-${cleanSku}`);
             const finalSlug = slug || name.toLowerCase()
                 .normalize('NFD')
                 .replace(/[\u0300-\u036f]/g, '')

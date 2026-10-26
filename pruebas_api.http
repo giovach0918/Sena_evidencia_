@@ -1,37 +1,53 @@
 ### ==============================================================================
 ### PRUEBAS DE LA API - EVIDENCIA GA7-220501096-AA2-EV01
 ### Módulo de Productos (Hazlo Tuyo)
-### Puedes ejecutar estas peticiones directamente con la extensión REST Client o Thunder Client en VS Code
+### Compatible con REST Client (VS Code), Thunder Client y Postman
 ### ==============================================================================
 
 @baseUrl = http://localhost:3000/api/products
 
-### 1. RUTA RAÍZ - Información del servicio
+### ------------------------------------------------------------------------------
+### 1. RUTA RAÍZ - Información general y estado del servicio
+### ------------------------------------------------------------------------------
 GET http://localhost:3000/
 
-### 2. CONSULTA (READ) - Listar todos los productos
+### ------------------------------------------------------------------------------
+### 2. CONSULTA (READ) - Listar todos los productos con su categoría
+### ------------------------------------------------------------------------------
 GET {{baseUrl}}
 
-### 3. CONSULTA (READ) - Obtener un producto por ID
+### ------------------------------------------------------------------------------
+### 3. CONSULTA (READ) - Obtener un producto existente por su ID
+### ------------------------------------------------------------------------------
 GET {{baseUrl}}/gl-pistola-pro
 
-### 4. INSERCIÓN (CREATE) - Registrar un nuevo producto
+### ------------------------------------------------------------------------------
+### 4. INSERCIÓN (CREATE) - Registrar un nuevo producto en MySQL
+### ------------------------------------------------------------------------------
 POST {{baseUrl}}
 Content-Type: application/json
 
 {
+    "id": "gl-rodillo-espuma-pro",
     "sku": "GL-RODILLO-ESPUMA-PRO",
     "name": "Rodillo de Masaje Vibratorio Pro",
     "category_id": 1,
     "price_cop": 189900,
     "compare_price_cop": 249900,
     "description": "Rodillo de espuma de alta densidad con 4 niveles de vibración para recuperación muscular profunda.",
-    "main_image": "assets/prod-rodillo-vibratorio.jpg",
+    "main_image": "assets/prod-pistola.jpg",
     "is_featured": true,
     "in_stock": true
 }
 
-### 5. ACTUALIZACIÓN (UPDATE) - Modificar un producto existente
+### ------------------------------------------------------------------------------
+### 5. CONSULTA (READ) - Verificar que el nuevo producto fue creado
+### ------------------------------------------------------------------------------
+GET {{baseUrl}}/gl-rodillo-espuma-pro
+
+### ------------------------------------------------------------------------------
+### 6. ACTUALIZACIÓN (UPDATE) - Modificar precio y descripción del producto
+### ------------------------------------------------------------------------------
 PUT {{baseUrl}}/gl-rodillo-espuma-pro
 Content-Type: application/json
 
@@ -42,5 +58,12 @@ Content-Type: application/json
     "in_stock": true
 }
 
-### 6. ELIMINACIÓN (DELETE) - Eliminar el producto creado
+### ------------------------------------------------------------------------------
+### 7. ELIMINACIÓN (DELETE) - Eliminar el producto creado de MySQL
+### ------------------------------------------------------------------------------
 DELETE {{baseUrl}}/gl-rodillo-espuma-pro
+
+### ------------------------------------------------------------------------------
+### 8. CONSULTA (READ) - Confirmar eliminación (debe responder 404 Not Found)
+### ------------------------------------------------------------------------------
+GET {{baseUrl}}/gl-rodillo-espuma-pro
